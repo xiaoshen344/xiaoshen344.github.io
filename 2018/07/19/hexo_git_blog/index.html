@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Centos7.2 hexo + Github 搭建个人博客 | Dir_Wang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.准备工作1.1安装gcc-g++1yum install gcc-c++ 1.2安装nodejs12345678wget https://nodejs.org/dist/v8.1.2/node-v8.1.2.tar.gz  tar -zxvf node-v8.1.2.tar.gz  cd node-v8.1.2  mkdir -p /opt/node  ./configure --prefix">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos7.2 hexo + Github 搭建个人博客">
+<meta property="og:url" content="https://xiaoshen344.github.io/2018/07/19/hexo_git_blog/index.html">
+<meta property="og:site_name" content="Dir_Wang&#39;s Blog">
+<meta property="og:description" content="1.准备工作1.1安装gcc-g++1yum install gcc-c++ 1.2安装nodejs12345678wget https://nodejs.org/dist/v8.1.2/node-v8.1.2.tar.gz  tar -zxvf node-v8.1.2.tar.gz  cd node-v8.1.2  mkdir -p /opt/node  ./configure --prefix">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-18T16:45:35.592Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Centos7.2 hexo + Github 搭建个人博客">
+<meta name="twitter:description" content="1.准备工作1.1安装gcc-g++1yum install gcc-c++ 1.2安装nodejs12345678wget https://nodejs.org/dist/v8.1.2/node-v8.1.2.tar.gz  tar -zxvf node-v8.1.2.tar.gz  cd node-v8.1.2  mkdir -p /opt/node  ./configure --prefix">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-hexo_git_blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+    <div class="mobile-nav">
+      <h1 class="nickname">NickName</h1>
+      <a id="menu">
+        &#9776; Menu
+      </a>
+    </div>
+    
+        <nav id="main-nav" class="main-nav nav-left">
+    
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Centos7.2 hexo + Github 搭建个人博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h2><h3 id="1-1安装gcc-g"><a href="#1-1安装gcc-g" class="headerlink" title="1.1安装gcc-g++"></a>1.1安装gcc-g++</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
+<h3 id="1-2安装nodejs"><a href="#1-2安装nodejs" class="headerlink" title="1.2安装nodejs"></a>1.2安装nodejs</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget https://nodejs.org/dist/v8.1.2/node-v8.1.2.tar.gz  </span><br><span class="line">tar -zxvf node-v8.1.2.tar.gz  </span><br><span class="line"><span class="built_in">cd</span> node-v8.1.2  </span><br><span class="line">mkdir -p /opt/node  </span><br><span class="line">./configure --prefix=/opt/node/  </span><br><span class="line">make &amp;&amp; make install  </span><br><span class="line">ln -s   /opt/node/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm  </span><br><span class="line">ln -s /opt/node/bin/node /usr/bin/node</span><br></pre></td></tr></table></figure>
+<h3 id="1-3配置GitHub"><a href="#1-3配置GitHub" class="headerlink" title="1.3配置GitHub"></a>1.3配置GitHub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xiaoshen344"</span>  </span><br><span class="line">git config --global user.email <span class="string">"xiaoshen344@126.com"</span></span><br></pre></td></tr></table></figure>
+<p>将ssh的公钥拷贝至GitHub<br>可使用命令验证是否配置成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-4安装hexo"><a href="#1-4安装hexo" class="headerlink" title="1.4安装hexo"></a>1.4安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g  </span><br><span class="line">ln -s /opt/node/lib/node_modules/hexo-cli/bin/hexo /usr/bin/hexo  </span><br><span class="line"><span class="built_in">cd</span> /opt/node/  </span><br><span class="line">hexo init blog  </span><br><span class="line"><span class="built_in">cd</span> blog/  </span><br><span class="line">npm install  </span><br><span class="line">hexo server  <span class="comment"># 启动hexo</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-config-yml中配置deploy"><a href="#1-5-config-yml中配置deploy" class="headerlink" title="1.5_config.yml中配置deploy"></a>1.5_config.yml中配置deploy</h3><p>deploy:<br>&nbsp;&nbsp;type: git<br>&nbsp;&nbsp;repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xiaoshen344/xiaoshen344.github.io.git<br>&nbsp;&nbsp;branch: master  </p>
+<h3 id="1-6将博客部署至GitHub"><a href="#1-6将博客部署至GitHub" class="headerlink" title="1.6将博客部署至GitHub"></a>1.6将博客部署至GitHub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo clean      <span class="comment">#清除缓存文件 (db.json) 和已生成的静态文件 (public)  在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。  </span></span><br><span class="line">hexo generate   <span class="comment">#生成静态文件   </span></span><br><span class="line">hexo g   </span><br><span class="line">hexo server     <span class="comment">#启动服务器。默认情况下，访问网址为 http://localhost:4000/  </span></span><br><span class="line">hexo s  </span><br><span class="line">hexo deploy     <span class="comment">#部署到 github   </span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+      
+      <div id="donate" class="donate">
+        <a id="github" href="https://github.com/geekplux" target="_blank" class="pos-f tr3" title="Github"></a>
+	      <div id="DonateText" class="tr3">Donate</div>
+	      <ul id="donateBox" class="list pos-f tr3">
+		      <li id="PayPal"><a href="https://www.paypal.me/geekplux" target="_blank">PayPal</a></li>
+		      <li id="BTC" data-footnote="Copy addres and show QRCode"><button id="BTCBn"  data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li>
+		      <li id="AliPay">AliPay</li>
+		      <li id="WeChat">WeChat</li>
+	      </ul>
+	      <div id="QRBox" class="pos-f left-100">
+		      <div id="BTCQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/bitcoin.png)"></div>
+		      <div id="AliPayQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/alipayQR.jpg)"></div>
+		      <div id="WeChatQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/wechatQR.jpg)"></div>
+	      </div>
+	      <!-- Bitcoin 账号 -->
+	      <input id="btc-key" type="text" value="1AVngxh56oLvAzXsEFnzccUohZdHswjC7j" readonly="readonly">
+      </div>
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2018/07/19/hexo_git_blog/" class="article-date">
+  <time datetime="2018-07-18T16:45:35.600Z" itemprop="datePublished">2018-07-19</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2018/07/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Fusce eget urna vitae velit <em>eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque</em> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
