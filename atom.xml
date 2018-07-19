@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://xiaoshen344.github.io/"/>
+  <link href="http://www.wodetian.top/"/>
   <updated>2018-07-18T16:56:53.139Z</updated>
-  <id>https://xiaoshen344.github.io/</id>
+  <id>http://www.wodetian.top/</id>
   
   <author>
     <name>Dir_Wang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Centos7.2 hexo + Github 搭建个人博客</title>
-    <link href="https://xiaoshen344.github.io/2018/07/19/hexo_git_blog/"/>
-    <id>https://xiaoshen344.github.io/2018/07/19/hexo_git_blog/</id>
+    <link href="http://www.wodetian.top/2018/07/19/hexo_git_blog/"/>
+    <id>http://www.wodetian.top/2018/07/19/hexo_git_blog/</id>
     <published>2018-07-18T16:56:53.140Z</published>
     <updated>2018-07-18T16:56:53.139Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://xiaoshen344.github.io/2018/07/13/hello-world/"/>
-    <id>https://xiaoshen344.github.io/2018/07/13/hello-world/</id>
+    <link href="http://www.wodetian.top/2018/07/13/hello-world/"/>
+    <id>http://www.wodetian.top/2018/07/13/hello-world/</id>
     <published>2018-07-12T18:28:36.846Z</published>
     <updated>2018-07-12T18:28:36.846Z</updated>
     
